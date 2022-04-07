@@ -1,0 +1,21 @@
+<div>
+    <h1>id: {{user.id}}</h1>
+    <h1>Name: {{user.name}}</h1>
+    <h1>Surname: {{user.surname}}</h1>
+    <h1>Age: {{user.age}}</h1>
+    <h1>Date of birth: {{user.dateOfBirth | date: 'dd/MMM/yyyy'}}</h1>
+    <h1>Address:</h1>
+    <h1>City: {{user.address.city}}</h1>
+    <h1>Street: {{user.address.city}}</h1>
+    <h1>PostlCode: {{user.address.postalCode}}</h1>
+    <h1>Role: {{user.role}}</h1>
+    <h1>username: {{user.username}}</h1>
+    <div>
+      <img [src]="user.profilPhotoUrl" alt="">
+    </div>
+    <h1>Gender: {{user.gender}}</h1>
+  </div>
+  <div *ngFor="let company of user.companies; index as i">
+    <p><strong> Company </strong>: {{ user.companies[i].name }}</p>
+    <p>Description : {{ user.companies[i].description }}</p>
+  </div>
